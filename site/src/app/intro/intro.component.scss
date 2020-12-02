@@ -1,0 +1,19 @@
+svg{
+    position: absolute;
+    top: 20%;
+    max-width: 800px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index:9999;
+    @media only screen  and (max-width : 991px){
+        width: 100%;
+       
+    }
+}
+
+// #conceito{
+//     path{
+//         filter:url(#shadow) !important;
+//     }
+// }

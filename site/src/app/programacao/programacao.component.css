@@ -1,0 +1,269 @@
+
+.header{
+    width: 100%;
+    display: table;
+    box-shadow: 0 2px 2px 2px rgba(14, 13, 13, 0.2),
+                0 1px 5px 0 rgba(0,0,0,0.2),
+                0 3px 1px -2px rgba(0,0,0,0.2);
+
+}
+
+h5{
+    color: #FFF;
+}
+p{
+    color: #abaaaa;
+}
+
+.parallax-container{
+    height:200px;
+    display: table-cell;
+    vertical-align: middle;
+}
+#bodyProgramacao{
+    padding-bottom: 60px;
+}
+
+.cabecalho img{
+    max-height: 50px;
+    margin:50px 0 0 0;
+}
+
+.cabecalho h2{
+    font-size: 2rem;
+    margin-top:0px; 
+}
+
+.cabecalho h3{
+    font-size: 2rem;
+    color: #FFF;
+}
+
+
+.fotoMinistrador a{
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+.divider{
+    margin:15px 0;
+    background: #232323;
+}
+
+.divider-abertura{
+    height: 50px;
+    background:transparent;
+    margin:15px 23px 25px 23px;
+}
+
+.divider-abertura h5{
+    line-height: 50px;
+    color: #0bafcf;
+}
+
+.divider-horario{
+    height: 50px;
+    background:transparent;
+    margin:15px 0 25px 0;
+}
+
+.divider-horario h5{
+    line-height: 50px;
+    color: #0bafcf;
+}
+
+.divider-coffee{
+    /* height: 50px; */
+    /* background:#A7D8EA; */
+    margin:15px 0 25px 0;
+    border-top:5px solid #232323;
+    border-bottom:5px solid #232323
+}
+
+.divider-coffee h5{
+    line-height: 50px;
+}
+
+.modulo-box{
+    padding:20px;
+    border:1px solid #cccccc;
+}
+
+.coffee{
+    padding:20px;
+    margin:20px 0!important;
+    background:#ffff00;
+}
+
+
+section .fotoMinistrador a{
+    width: 100%;
+    margin:5px 0;
+    font-size:0.8rem;
+    padding:0!important;
+}
+
+.aula-dupla{
+    background-color:rgba(25,118,210,0.2);
+    margin:0;
+    padding-bottom: 20px;
+}
+
+
+.conteudo .cabecalho,
+.conteudo h2 {
+    text-align: center;
+}
+.conteudo h2,
+.conteudo h3 {
+    font-size: 1.9rem;
+}
+.conteudo img {
+    margin-top: 5%;
+}
+
+.titulo {
+    margin-top: 5%;
+    font-size: 1.2rem;
+}
+
+.texto-titulo{
+    font-size: 1.2rem;
+}
+
+.texto-titulo strong{
+    font-size: 1.2rem;
+}
+
+.programacao-container {
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 30px;
+    background-color:#171717;
+    color:#ffffff;
+    border-bottom: 2px solid #232323;
+}
+
+.curso-horario{
+    font-size: 1.5rem;
+    text-align:center!important;
+    background-color:#232323;
+    padding:10px;
+}
+
+.box-programacao{
+    padding:30px;
+}
+
+/*****************************************************/
+/* * * * * * R E S P O N S I V I D A D E * * * * * * */
+/*****************************************************/
+
+/* Desktops gigantes */
+@media only screen  and (min-width : 1920px) {
+    /*p, img, div {
+        border:1px solid red;
+    }*/
+
+}
+
+/* Desktops maiores */
+@media only screen  and (min-width : 1573px) and (max-width : 1920px) {
+    /* p, img, div {
+        border:1px solid green;
+    }*/
+    .fotoMinistrador a{
+        font-size:0.9rem!important;
+        width: 100%;
+        padding:0;
+    }
+}
+
+/* Desktops menores */
+@media only screen  and (min-width : 1399px) and (max-width : 1572px) {
+    /* p, img, div {
+        border:1px solid blue;
+    } */
+    .fotoMinistrador a{
+        font-size:0.9rem!important;
+        width: 100%;
+        padding:0;
+    }
+}
+
+/* Desktops menores */
+@media only screen  and (min-width : 1224px) and (max-width : 1398px) {
+    /* p, img, div {
+        border:1px solid red;
+    } */
+    .fotoMinistrador a{
+        font-size:0.8rem!important;
+        width: 100%;
+        padding:0;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width : 1024px) and (max-width : 1223px) {
+    /* p, img, div {
+        border:1px solid blueviolet;
+    } */
+    .fotoMinistrador a{
+        font-size:0.75rem!important;
+        width: 100%;
+        padding:0;
+    }
+}
+
+@media only screen and (min-width : 897px) and (max-width : 1024px) {
+    /* p, img, div {
+        border:1px solid orange;
+    } */
+    .fotoMinistrador a{
+        font-size:0.75rem!important;
+        width: 120%!important;
+        padding:0!important;
+        margin-left:-10px!important;
+    }
+}
+
+/* iPads - Teste no desktop reduzido */
+@media only screen and (min-width : 768px) and (max-width : 896px) {
+    /* p, img, div {
+        border:1px solid orange;
+    } */
+    .fotoMinistrador a{
+        font-size:0.65rem!important;
+        width: 120%!important;
+        padding:0!important;
+        margin-left:-10px!important;
+    }
+}
+
+/* Limbo entre Smartphone e iPads - Teste no desktop reduzido */
+@media only screen and (min-width: 641px) and (max-width: 767px){
+    /* p, img, div {
+        border:1px solid greenyellow;
+    } */
+    .fotoMinistrador a{
+        font-size:0.6rem!important;
+        width: 120%!important;
+        padding:0!important;
+        margin-left:-10px!important;
+    }
+
+}
+
+/* Smartphone maiores - Teste no desktop reduzido */
+@media only screen and (min-width: 600px) and (max-width: 640px) {
+    /* p, img, div {
+        border:1px solid purple;
+    } */
+    .fotoMinistrador a{
+        font-size:0.6rem!important;
+        width: 120%!important;
+        padding:0;
+        margin-left:-10px!important;
+    }
+    
+}

@@ -1,0 +1,250 @@
+<app-menu-internas></app-menu-internas>
+<section id="titlePage" class="center-align">
+  <h2>Programação</h2>
+  <hr>
+</section>
+
+<section id="programacaoPage">
+ 
+    <section id="bodyProgramacao">
+        <div class="color-section prog1">
+          <section class="container">
+        
+            <div class="row">
+              <div class="col s12">
+                <div class="cabecalho center">
+                  <img src="/assets/img/layout/calendar.png" class="responsive-img" alt="">
+                  <h3 class="center">Dia 26 de setembro
+                    <br>(quinta-feira)</h3>
+                </div>
+                <div class="row">
+                  <div *ngFor="let item of progDia1">
+                    <div *ngFor="let curso of item.cursos">
+                      <div class="col s12 m6 l4 ">
+                        <div class="card sticky-action">
+                          <div class="card-image waves-effect waves-block waves-light "
+                            *ngFor="let min of curso.ministrador.imagens">
+                            <img [src]="'https://www.odonto1.com/uploads/arquivos/'+min.imagem.url"
+                              [alt]="curso.ministrador.nome" class="responsive-img ">
+                          </div>
+                          <div class="card-content center-align">
+                            <span class="card-title activator grey-text text-darken-4">{{curso.ministrador.nome}}
+                              <span class="btn-floating btn-large halfway-fab waves-effect waves-light red">
+                                <i class="material-icons right">add</i></span>
+                            </span>
+        
+                            <p class="horario"> Das {{item.dataInicio | date:'HH'}}h<span *ngIf="(item.dataInicio | date: 'mm') != 00">{{item.dataInicio | date: 'mm'}}</span>
+                              às
+                              {{item.dataTermino | date: 'HH'}}h<span
+                                *ngIf="(item.dataTermino | date: 'mm') != 00">{{item.dataTermino | date: 'mm'}}</span>
+                            </p>
+                          </div>
+        
+                          <!-- <div class="card-action">
+                                              <a href="#">This is a link</a>
+                                              <a href="#">This is a link</a>
+                                            </div> -->
+        
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{curso.ministrador.nome}}<i
+                                class="material-icons right">close</i></span>
+                            <p class="destaque">
+                              <b>Tema: </b>
+                              <span>{{item.temaGeral}}</span>
+        
+                            </p>
+                            <p class="destaque">
+                              <span *ngIf="item.abordagemGeral">
+                                <b>Abordagem: </b>{{item.abordagemGeral}}</span>
+                            </p>
+                            <a routerLink="/programacao/single" [queryParams]="{id:item.id, tema:item.temaGeral}"
+                              class="waves-effect waves-light btn btn-default desktop">Saiba mais</a>
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="color-section prog2">
+          <section class="container">
+        
+            <div class="row">
+              <div class="col s12">
+                <div class="cabecalho center">
+                  <img src="/assets/img/layout/calendar.png" class="responsive-img" alt="">
+                  <h3 class="center">Dia 27 de setembro
+                    <br>(sexta-feira)</h3>
+                </div>
+                <div class="row">
+                  <div *ngFor="let item of progDia2">
+                    <div *ngFor="let curso of item.cursos">
+                      <div class="col s12 m6 l4 ">
+                        <div class="card sticky-action">
+                          <div class="card-image waves-effect waves-block waves-light "
+                            *ngFor="let min of curso.ministrador.imagens">
+                            <img [src]="'https://www.odonto1.com/uploads/arquivos/'+min.imagem.url"
+                              [alt]="curso.ministrador.nome" class="responsive-img ">
+                          </div>
+                          <div class="card-content center-align">
+                            <span class="card-title activator grey-text text-darken-4">{{curso.ministrador.nome}}
+                              <span class="btn-floating btn-large halfway-fab waves-effect waves-light red">
+                                <i class="material-icons right">add</i></span>
+                            </span>
+        
+                            <p class="horario"> Das {{item.dataInicio | date:'HH'}}h<span *ngIf="(item.dataInicio | date: 'mm') != 00">{{item.dataInicio | date: 'mm'}}</span>
+                              às
+                              {{item.dataTermino | date: 'HH'}}h<span
+                                *ngIf="(item.dataTermino | date: 'mm') != 00">{{item.dataTermino | date: 'mm'}}</span>
+                            </p>
+                          </div>
+        
+                          <!-- <div class="card-action">
+                                                                  <a href="#">This is a link</a>
+                                                                  <a href="#">This is a link</a>
+                                                                </div> -->
+        
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{curso.ministrador.nome}}<i
+                                class="material-icons right">close</i></span>
+                            <p class="destaque">
+                              <b>Tema: </b>
+                              <span>{{item.temaGeral}}</span>
+        
+                            </p>
+                            <p class="destaque" *ngIf="item.abordagemGeral">
+                              <span>
+                                <b>Abordagem: </b>{{item.abordagemGeral}}</span>
+                            </p>
+                            <a routerLink="/programacao/single" [queryParams]="{id:item.id, tema:item.temaGeral}"
+                              class="waves-effect waves-light btn btn-default desktop">Saiba mais</a>
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="color-section prog3" >
+          <section class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="cabecalho center">
+                  <img src="/assets/img/layout/calendar.png" class="responsive-img" alt="">
+                  <h3 class="center">Dia 28 de setembro
+                    <br>(sábado)</h3>
+                </div>
+                <div class="row">
+                  <div *ngFor="let item of progDia3">
+                    <div *ngFor="let curso of item.cursos">
+                      <div class="col s12 m6 l4 "
+                        *ngIf="item.temaGeral != 'Considerações anatômicas aplicadas às intercorrências em HOF'">
+                        <div class="card sticky-action">
+                          <div class="card-image waves-effect waves-block waves-light "
+                            *ngFor="let min of curso.ministrador.imagens">
+                            <img [src]="'https://www.odonto1.com/uploads/arquivos/'+min.imagem.url" [alt]="curso.ministrador.nome"
+                              class="responsive-img ">
+                          </div>
+                          <div class="card-content center-align">
+                            <span class="card-title activator grey-text text-darken-4">{{curso.ministrador.nome}}
+                              <span class="btn-floating btn-large halfway-fab waves-effect waves-light red">
+                                <i class="material-icons right">add</i></span>
+                            </span>
+            
+                            <p class="horario"> Das {{item.dataInicio | date:'HH'}}h<span *ngIf="(item.dataInicio | date: 'mm') != 00">{{item.dataInicio | date: 'mm'}}</span>
+                              às
+                              {{item.dataTermino | date: 'HH'}}h<span
+                                *ngIf="(item.dataTermino | date: 'mm') != 00">{{item.dataTermino | date: 'mm'}}</span>
+                            </p>
+                          </div>
+            
+                          <!-- <div class="card-action">
+                                                                <a href="#">This is a link</a>
+                                                                <a href="#">This is a link</a>
+                                                              </div> -->
+            
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{curso.ministrador.nome}}<i
+                                class="material-icons right">close</i></span>
+                            <p class="destaque">
+                              <b>Tema: </b>
+                              <span>{{item.temaGeral}}</span>
+            
+                            </p>
+                            <p class="destaque" *ngIf="item.abordagemGeral">
+                              <span>
+                                <b>Abordagem: </b>{{item.abordagemGeral}}</span>
+                            </p>
+                            <a routerLink="/programacao/single" [queryParams]="{id:item.id, tema:item.temaGeral}"
+                              class="waves-effect waves-light btn btn-default desktop">Saiba mais</a>
+                          </div>
+                        </div>
+            
+            
+                      </div>
+                      <!-- aula  dupla -->
+                      <div class="col s12 m6 l4 container-duplo "
+                        *ngIf="item.temaGeral == 'Considerações anatômicas aplicadas às intercorrências em HOF'">
+                        <div class="card sticky-action ">
+                          <div class="card-image waves-effect waves-block waves-light "
+                            *ngFor="let min of curso.ministrador.imagens">
+                            <img [src]="'https://www.odonto1.com/uploads/arquivos/'+min.imagem.url" [alt]="curso.ministrador.nome"
+                              class="responsive-img ">
+                          </div>
+                          <div class="card-content center-align">
+                            <span class="card-title activator grey-text text-darken-4">{{curso.ministrador.nome}}
+                              <span class="btn-floating btn-large halfway-fab waves-effect waves-light red">
+                                <i class="material-icons right">add</i></span>
+                            </span>
+            
+                            <p class="horario"> Das {{item.dataInicio | date:'HH'}}h
+                              <span *ngIf="(item.dataInicio | date: 'mm') != 00">{{item.dataInicio | date: 'mm'}}</span>
+                              às
+                              {{item.dataTermino | date: 'HH'}}h<span
+                                *ngIf="(item.dataTermino | date: 'mm') != 00">{{item.dataTermino | date: 'mm'}}</span>
+                            </p>
+                          </div>
+            
+                          <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{curso.ministrador.nome}}<i
+                                class="material-icons right">close</i></span>
+                            <p class="destaque">
+                              <b>Tema: </b>
+                              <span>{{item.temaGeral}}</span>
+            
+                            </p>
+                            <p class="destaque" *ngIf="item.abordagemGeral">
+                              <span>
+                                <b>Abordagem: </b>{{item.abordagemGeral}}</span>
+                            </p>
+                            <a routerLink="/programacao/single" [queryParams]="{id:item.id, tema:item.temaGeral}"
+                              class="waves-effect waves-light btn btn-default desktop">Saiba mais</a>
+                          </div>
+                        </div>
+            
+            
+                      </div>
+                      <!--  fim aula  dupla -->
+            
+                    </div>
+                  </div>
+                </div>
+            
+            
+              </div>
+            </div>  
+            
+        
+          </section>
+        </div>
+      </section>
+
+</section>

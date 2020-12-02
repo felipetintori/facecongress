@@ -1,0 +1,96 @@
+@import "assets/scss/variables";
+@import "assets/scss/includes/_menu";
+@import "assets/scss/includes/_home";
+@import "assets/scss/includes/_sobre";
+@import "assets/scss/includes/_programacao";
+@import "assets/scss/includes/_expo";
+@import "assets/scss/includes/_adesao";
+@import "assets/scss/includes/_informacoes";
+@import "assets/scss/includes/_countdown";
+@import "assets/scss/includes/_abertura";
+@import "assets/scss/includes/_banner";
+@import "assets/scss/includes/_patrocinadores";
+@import "assets/scss/includes/_atividadesParalelas";
+@import "assets/scss/includes/_livroOficial";
+@import "assets/scss/includes/_noticias";
+@import "assets/scss/includes/_hospedagem";
+@import "assets/scss/includes/_footer";
+
+body{
+    overflow-x: hidden;
+}
+h2{
+    font-size: $font-size-h1-default;
+    font-family: $font-title;
+    color: $color-title-default;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media only screen  and (max-width : $medium){
+        font-size: $font-size-h1-medium-default;
+    }
+}
+
+p{
+    color: $color-txt-default;
+    font-size: $font-size-p-default;
+    font-family: $font-robotoC;
+    line-height: 30px;
+}
+
+.btn-default{
+    background: $color-blue-default;
+    border: 1px solid $color-blue-default;
+    color: #FFF;
+    font-family: $font-robotoC;
+    &:hover{
+        background: transparent;
+        color: $color-blue-default;
+    }
+}
+
+.btn-default-dark{
+    background: $color-dark-default;
+    border: 1px solid $color-dark-default;
+    color: #FFF;
+    font-family: $font-robotoC;
+    &:hover{
+        background: transparent;
+        color: $color-dark-default;
+    }
+}
+
+hr{
+    width: 100px;
+    height: 3px;
+    background: $color-blue-default;
+    border: none;
+}
+
+.row{
+    margin: 0px ;
+}
+
+#titlePage{
+    background: url(/assets/img/layout/bckg_fazemos.jpg) no-repeat;
+    background-size: cover;
+    background-position:center;  
+    padding:60px 0px;
+    margin-top: 64px;
+    @media only screen  and (max-width : $medium){
+        margin-top: 100px;
+        padding: 30px 0px;
+    }
+    h2{
+        margin: 0px;
+        color:#FFF;
+    }
+}
+
+#sidenav-overlay{
+    z-index: 0;
+}
+
+
+
+
+

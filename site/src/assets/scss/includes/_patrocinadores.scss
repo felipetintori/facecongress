@@ -1,0 +1,9 @@
+#patrocinadores{
+    @include paddingSection;
+    background: $color-grey-default;
+    border-top: 1px solid $color-border-default;
+    h2{
+        font-size: 20px;
+        text-transform: initial;
+    }
+}

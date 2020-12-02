@@ -1,0 +1,30 @@
+#sobrePage{
+    .textSobre{
+        @include paddingSection;
+        h3{
+            font-size: 2rem;
+            font-family: $font-title;
+            font-weight: bold
+        }
+    }    
+    #ministradores{
+        padding: 30px 0px;
+        background: $color-grey-default;
+        border-top: 1px solid $color-border-default;
+        .ministradores{
+            img{
+                max-width: 250px;
+                width: 100%;
+                border: 1px solid $color-border-default;
+            }
+            h2{
+                text-transform: initial;
+                font-size: 30px;
+                margin-top: 10px;
+            }
+            p{
+                margin: 0px;
+            }
+        }
+    }
+}

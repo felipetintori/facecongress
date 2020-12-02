@@ -1,0 +1,11 @@
+.noticiasPage{
+    @include paddingSection;
+    h2{
+        font-size: $font-size-h1-default;
+        font-weight: bold;
+        text-transform: initial;
+        @media only screen  and (max-width : $medium){
+            font-size: $font-size-h1-medium-default;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+<app-menu-internas></app-menu-internas>
+<section id="titlePage" class="center-align">
+  <h2>Programação</h2>
+  <hr>
+</section>
+<section id="programacaoPage">
+  <section id="bodyProgramacao">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col s12 programacao-container">
+
+          <div *ngIf="programacao.temaGeral == 'Curso de imersão em Harmonização Orofacial'"
+            class="horario-curso center">
+            Dia 21/09 das 14h às 17h30
+          </div>
+
+          <div *ngFor="let curso of programacao.cursos">
+
+            <div *ngIf="programacao.temaGeral != 'Considerações anatômicas aplicadas às intercorrências em HOF'">
+              <div class="curso-horario center">
+                Dia {{programacao.dataInicio | date: 'dd'}}/{{programacao.dataInicio | date: 'MM'}} das
+                {{programacao.dataInicio | date:
+              'HH'}}h<span *ngIf="(programacao.dataInicio | date: 'mm') != 00">{{programacao.dataInicio |
+                  date: 'mm'}}</span>
+                às
+                {{programacao.dataTermino | date: 'HH'}}h<span *ngIf="(programacao.dataTermino | date: 'mm') != 00">{{programacao.dataTermino
+                  | date: 'mm'}}</span>
+              </div>
+
+              <div class="row box-programacao">
+
+                <div class="col m4 l3 s12 fotoMinistrador">
+                  <span *ngFor="let min of curso.ministrador.imagens">
+                    <img [src]="'https://www.odonto1.com/uploads/arquivos/' + min.imagem.url"
+                      [alt]="curso.ministrador.nome" class="responsive-img circle">
+                  </span>
+                  <br>
+                  <span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 19">
+                      <a routerLink="/programacao/dia19"
+                        class="waves-effect waves-light btn btn-default">Dia
+                        19</a>
+                    </span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 20">
+                      <a routerLink="/programacao/dia20"
+                        class="waves-effect waves-light btn btn-default">Dia
+                        20</a>
+                    </span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 21">
+                      <a routerLink="/programacao/dia21"
+                        class="waves-effect waves-light btn btn-default">Dia
+                        21</a>
+                    </span>
+                  </span>
+                  <span>
+                    <a routerLink="/adesao" [queryParams]="{origem:'/single', tema: programacao.temaGeral}"
+                      class="waves-effect waves-light btn btn-default-dark">Fazer adesão</a>
+                  </span>
+                  <br>
+                </div>
+
+                <div class="col m8 l9 s12">
+                  <h5>
+                    {{curso.ministrador.nome}}
+                    <span *ngIf="curso.ministrador.pais != 'Brasil'">
+                      <small>({{curso.ministrador.pais}}) </small>
+                    </span>
+                  </h5>
+                  <div class="divider"></div>
+                  <p style="font-style:italic;">{{curso.ministrador.curriculo}}</p>
+                  <p class="destaque">
+                    <strong class="white-text">Tema: </strong>{{programacao.temaGeral}}
+                  </p>
+                  <p class="destaque" *ngIf="programacao.abordagemGeral">
+                        
+                    <strong class="white-text">Abordagem: </strong>{{programacao.abordagemGeral}}
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+            <!-- aula dupla -->
+            <div *ngIf="programacao.temaGeral == 'Considerações anatômicas aplicadas às intercorrências em HOF'">
+              
+              <div class="curso-horario center">
+                Dia {{programacao.dataInicio | date: 'dd'}}/{{programacao.dataInicio | date: 'MM'}} das
+                {{programacao.dataInicio | date:
+                            'HH'}}h<span *ngIf="(programacao.dataInicio | date: 'mm') != 00">{{programacao.dataInicio |
+                                date: 'mm'}}</span>
+                às
+                {{programacao.dataTermino | date: 'HH'}}h<span *ngIf="(programacao.dataTermino | date: 'mm') != 00">{{programacao.dataTermino
+                                | date: 'mm'}}</span>
+              </div>
+            
+              <div class="row box-programacao">
+            
+                <div class="col m4 l3 s12 fotoMinistrador">
+                  <span *ngFor="let min of curso.ministrador.imagens">
+                    <img [src]="'https://www.odonto1.com/uploads/arquivos/' + min.imagem.url" [alt]="curso.ministrador.nome"
+                      class="responsive-img circle">
+                  </span>
+                  <br>
+                  <span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 19">
+                      <a routerLink="/programacao/dia19" class="waves-effect waves-light btn btn-default">Dia
+                        19</a>
+                    </span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 20">
+                      <a routerLink="/programacao/dia20" class="waves-effect waves-light btn btn-default">Dia
+                        20</a>
+                    </span>
+                    <span *ngIf="(programacao.dataTermino | date: 'dd') == 21">
+                      <a routerLink="/programacao/dia21" class="waves-effect waves-light btn btn-default">Dia
+                        21</a>
+                    </span>
+                  </span>
+                  <span>
+                    <a routerLink="/adesao" [queryParams]="{origem:'/single', tema: programacao.temaGeral}"
+                      class="waves-effect waves-light btn btn-default-dark">Fazer adesão</a>
+                  </span>
+                  <br>
+                </div>
+            
+                <div class="col m8 l9 s12">
+                  <h5>
+                    {{curso.ministrador.nome}}
+                    <span *ngIf="curso.ministrador.pais != 'Brasil'">
+                      <small>({{curso.ministrador.pais}}) </small>
+                    </span>
+                  </h5>
+                  <div class="divider"></div>
+                  <p style="font-style:italic;">{{curso.ministrador.curriculo}}</p>
+                  <p class="destaque">
+                    <strong class="white-text">Tema: </strong>{{programacao.temaGeral}}
+                  </p>
+                  <p class="destaque"  >
+                    <strong class="white-text">Abordagem: </strong>{{programacao.abordagemGeral}}
+                  </p>
+            
+                </div>
+            
+              </div>
+            </div>
+            <!-- fim aula dupla -->
+            <div *ngIf="programacao.temaGeral == 'Curso de imersão em Harmonização Orofacial'">
+
+
+              <div class="box-curso-single">
+                <div class="row">
+                  <div class="col m2 s12 fotoMinistrador">
+                    <span *ngFor="let min of curso.ministrador.imagens">
+                      <img [src]="'https://www.odonto1.com/uploads/arquivos/' + min.imagem.url"
+                        [alt]="curso.ministrador.nome" class="responsive-img circle">
+                    </span>
+                    <br>
+                    <span>
+                      <span *ngIf="(programacao.dataTermino | date: 'dd') == 19">
+                        <a routerLink="/programacao/dia19"
+                          class="waves-effect waves-light btn btn-default">Dia
+                          19</a>
+                      </span>
+                      <span *ngIf="(programacao.dataTermino | date: 'dd') == 20">
+                        <a routerLink="/programacao/dia20"
+                          class="waves-effect waves-light btn btn-default">Dia
+                          20</a>
+                      </span>
+                      <span *ngIf="(programacao.dataTermino | date: 'dd') == 21">
+                        <a routerLink="/programacao/dia21"
+                          class="waves-effect waves-light btn btn-default">Dia
+                          21</a>
+                      </span>
+                    </span>
+                    <span>
+                      <a routerLink="/adesao" [queryParams]="{origem:'/single', tema: programacao.temaGeral}"
+                        class="waves-effect waves-light btn btn-default-dark">Fazer adesão</a>
+                    </span>
+                    <br>
+                  </div>
+
+                  <div class="col m10 s12">
+                    <h5>
+                      {{curso.ministrador.nome}}
+                      <span *ngIf="curso.ministrador.pais != 'Brasil'">
+                        <small>({{curso.ministrador.pais}}) </small>
+                      </span>
+                    </h5>
+                    <div class="divider"></div>
+                    <p style="font-style:italic;">{{curso.ministrador.curriculo}}</p>
+                    <p class="destaque">
+                      <strong class="white-text">Tema: </strong>{{curso.tema}}
+                    </p>
+                    <p class="destaque" >
+                      <strong class="white-text">Abordagem: </strong>{{curso.abordagem}}
+                    </p>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</section>

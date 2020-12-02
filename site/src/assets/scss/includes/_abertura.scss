@@ -1,0 +1,14 @@
+#abertura{
+    width: 100vw;
+    height: 100vh;
+    background: $color-dark-default;
+    position: fixed;
+    svg{
+        max-width: 200px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 35%;
+    }
+}

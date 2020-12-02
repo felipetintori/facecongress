@@ -1,0 +1,67 @@
+// ::::::::::::::::Fonte Face:::::::::::::::::::::
+@font-face {
+    font-family: 'Square721 Cn BT';
+    src: url('/assets/fonts/Square721BT-BoldCondensed.eot');
+    src: url('/assets/fonts/Square721BT-BoldCondensed.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Square721BT-BoldCondensed.woff2') format('woff2'),
+        url('/assets/fonts/Square721BT-BoldCondensed.woff') format('woff'),
+        url('/assets/fonts/Square721BT-BoldCondensed.ttf') format('truetype'),
+        url('/assets/fonts/Square721BT-BoldCondensed.svg#Square721BT-BoldCondensed') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Square721 Cn BT';
+    src: url('/assets/fonts/Square721BT-RomanCondensed.eot');
+    src: url('/assets/fonts/Square721BT-RomanCondensed.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/Square721BT-RomanCondensed.woff2') format('woff2'),
+        url('/assets/fonts/Square721BT-RomanCondensed.woff') format('woff'),
+        url('/assets/fonts/Square721BT-RomanCondensed.ttf') format('truetype'),
+        url('/assets/fonts/Square721BT-RomanCondensed.svg#Square721BT-RomanCondensed') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+// ::::::::::::::::Fonte Face:::::::::::::::::::::
+
+// ::::::::::::::::Variables:::::::::::::::::::::
+// Cores
+$color-blue-default:#25aae1;
+$color-blue-secundary:#1889b7;
+$color-grey-default:#fbfbfb;
+$color-grey-dark-default: #e6e6e6;
+$color-dark-default: #241f20;
+$color-border-default:#ececec;
+$color-stripped-table:#f2f2f2;
+$color-title-default: #2c2c2c;
+$color-txt-default: #6b6b6b;
+$color-border-dark: #272727;
+$border-white-transparent: rgba(255, 255, 255, 0.2); //branco com alpha
+// Fim Cores
+
+// Fontes
+$font-title: 'Square721 Cn BT';
+$font-robotoC:'Roboto Condensed', sans-serif;
+$font-size-h1-default: 50px;
+$font-size-h1-medium-default: 32px;
+$font-size-p-default: 16px;
+// Fim Fontes
+
+// Media Query
+$medium:991px;
+$tablet:599px;
+// Media Query
+
+// ::::::::::::::::Variables:::::::::::::::::::::
+
+// ::::::::::::::::Mixins:::::::::::::::::::::
+
+@mixin paddingSection {
+    padding: 60px 0px;
+    @media only screen  and (max-width : $tablet){
+        padding: 30px 0px;
+    }
+  }
+
+// ::::::::::::::::Mixins:::::::::::::::::::::
+

@@ -1,0 +1,205 @@
+header#menuGlobal{
+    position: fixed;  
+    top: 0;
+    width: 100%;    
+    nav{
+        background: transparent;
+        border-bottom: 1px solid $border-white-transparent;
+        padding-right: 10px;
+        height: 100px;
+        box-shadow: none;
+        transition: .2s all;
+        @media only screen  and (max-width : $medium){
+            background: #FFF;
+            height: 64px;
+        }
+        .brand-logo{
+            padding: 10px;
+            height: 70px;
+            padding-top: 2px;
+            img{
+                width: 170px;
+                padding-top: 3px;
+            }
+        }
+        ul{
+            li{
+                line-height: 100px;
+                a{
+                    color: #FFF;
+                    font-size: $font-size-p-default;
+                    i{
+                        line-height: 100px;
+                        
+                    }
+                    &:hover{
+                        color: $color-blue-default;
+                        background: none;
+                    }
+                    &.active{
+                        color: $color-blue-default;
+                        background: none;
+                        &.btn-azul-padrao{
+                            background: transparent !important;
+                            color: $color-blue-default !important;
+                        }
+                    }
+                    &.btn-azul-padrao{
+                        display: initial ;
+                        padding: 10px;
+                        color: #FFF ;
+                        background: $color-blue-default;
+                        border: 1px solid $color-blue-default;
+                        &:hover{
+                            background: transparent ;
+                            color: $color-blue-default;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &.nav-branco{
+            background: #FFF ;
+            height: 64px;
+            border-bottom: 1px solid $color-border-default;
+            ul{
+                li{
+                    line-height: 64px;
+                    a{
+                        color: $color-txt-default;
+                        i{
+                            line-height: 64px;
+                        }
+                        &.active{
+                            color: $color-blue-default;
+                        }
+                        &.btn-azul-padrao{
+                            color: #FFF;
+                            &:hover{
+                                color: $color-blue-default;
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }  
+    .side-nav{
+        @media only screen  and (max-width : $medium){
+            background: #FFF!important;
+            li{
+                a{
+                    color: $color-txt-default;
+                    border-bottom: 1px solid #262727;
+                    padding: 0px 15px;
+                    &:hover{
+                        color: $color-blue-default;
+                    }
+                }
+            }
+            ul{
+                li{
+                    a{                        
+                        
+                        i{
+                            transition: .5s all;
+                            @media only screen  and (max-width : $medium){
+                                margin: 0px !important;
+                            }
+                        }
+                    }
+                    ul{
+                        background: #f2f2f2;
+                    }
+                    &.active{
+                        i{
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+        }        
+    }  
+
+    ul.side-nav li a{
+        border-bottom: 1px solid $color-border-default
+    }
+    &.menu-internas{
+        nav{
+            height: 64px; 
+            background: #FFF;
+            .brand-logo{
+                padding: 10px;
+                height: 70px;
+                padding-top: 2px;
+                display: block !important;
+                cursor: pointer;
+                img{
+                    width: 170px;
+                    padding-top: 3px;                
+                }
+            }
+            ul{
+                li{
+                    line-height: 64px;
+                    a{
+                        color: $color-txt-default;
+                        font-size: $font-size-p-default;
+                        i{
+                            line-height: 64px;
+                        }
+                        &:hover{
+                            color: $color-blue-default;
+                            background: none;
+                        }
+                        &.active{
+                            color: $color-blue-default;
+                            background: none;
+                        }
+                        &.btn-azul-padrao{
+                            display: initial ;
+                            padding: 10px;
+                            color: #FFF ;
+                            background: $color-blue-default;
+                            border: 1px solid $color-blue-default;
+                            &:hover{
+                                background: transparent ;
+                                color: $color-blue-default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn-adesao-mobile{
+        margin-top: 64px;
+        width: 100%;
+        display: none;
+        background: $color-blue-default;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

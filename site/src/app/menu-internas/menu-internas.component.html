@@ -1,0 +1,128 @@
+<header id="menuGlobal"  class="container-fluid navbar-fixed menu-internas">
+    <span class="label-right"></span>
+    <nav >
+      <div class="nav-wrapper">
+        <a class="button-collapse mobile" href="#!" data-activates="menu-mobile">
+          <i class="material-icons black-text text-darken-2">menu</i>
+        </a>
+        <a style="display:none;" class="brand-logo menu">
+          <img routerLink="/home" src="assets/img/layout/logo.png" alt="">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a routerLink="/home" routerLinkActive="active" class=" home-link-menu text-darken-2">Home</a></li>
+          <li>
+              <a class="dropdown-button text-darken-2" href="#!" data-activates="menu-sobre">
+                <i class="material-icons right">arrow_drop_down</i>O evento</a>
+            </li>
+            <li>
+              <a class="dropdown-button text-darken-2" href="#!" data-activates="menu-programacao">
+                <i class="material-icons right">arrow_drop_down</i>Programação</a>
+            </li>
+          <li><a routerLink="/expo"  routerLinkActive="active" class="  text-darken-2">ExpoFACE 2019</a></li>
+          <!-- <li><a  routerLinkActive="active" class="informacoes-link-internas text-darken-2">Informações</a></li> -->
+          <!-- <li><a routerLink="/noticias" class="blue-text text-darken-2">Notícias</a></li> -->
+          <li><a routerLink="/adesao" routerLinkActive="active" class="btn-azul-padrao">Adesão</a></li>
+        </ul>
+        
+      </div>
+    </nav>
+
+    <ul id="menu-sobre" class="dropdown-content">
+      <li>
+        <a routerLink="/sobre" class="blue-text text-darken-3" translate>O evento</a>
+      </li>
+      <li>
+          <a routerLink="/livro" class="blue-text text-darken-3" translate>Livro Oficial</a>
+      </li>
+      <li>
+        <a routerLink="/todas-noticias" class="blue-text text-darken-2">Notícias</a>
+      </li>
+      <li>
+        <a routerLink="/informacoes" class="blue-text text-darken-3" translate>Informações</a>
+      </li>
+      <li>
+        <a routerLink="/hospedagem"  routerLinkActive="active" class=" blue-text text-darken-3">Hospedagem</a>
+      </li>
+    </ul>
+    
+    <ul id="menu-programacao" class="dropdown-content">
+      <!-- <li>
+        <a  class="blue-text text-darken-3" translate>Programação</a>
+      </li> -->
+      <li>
+        <a routerLink="/programacao" class="blue-text text-darken-3" translate>Cursos e Conferências</a>
+      </li>
+      <li>
+        <a routerLink="/atividade-paralela" class="blue-text text-darken-3" translate>Atividades Paralelas</a>
+      </li>
+    
+    
+    </ul>
+    <!-- MOBILE MENU -->
+  <a  routerLink="/adesao" class="btn btn-adesao-mobile show-on-medium-and-down" >Adesao</a>
+
+  <!-- MOBILE MENU -->
+
+<ul id="menu-mobile" class="side-nav">
+    <li>
+      <a routerLink="/home" class="">Home</a>
+    </li>
+  
+    <li class="mobile-dropdown">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">O evento<i class="material-icons right ">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+                <li>
+                    <a routerLink="/sobre" class="" translate>O evento</a>
+                  </li>
+                  <li>
+                      <a routerLink="/livro" class="" translate>Livro Oficial</a>
+                  </li>
+                  <li>
+                      <a routerLink="/todas-noticias" >Notícias</a>
+                    </li>
+                  <li>
+                    <a routerLink="/informacoes" class="" translate>Informações</a>
+                  </li>
+                  <li>
+                    <a routerLink="/hospedagem" >Hospedagem</a>
+                  </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  
+    <li class="mobile-dropdown">
+      <ul class="collapsible collapsible-accordion">
+        <li>
+          <a class="collapsible-header">Programação<i class="material-icons right ">arrow_drop_down</i></a>
+          <div class="collapsible-body">
+            <ul>
+                <!-- <li>
+                  <a  translate>Programação</a>
+                </li> -->
+                <li>
+                  <a  routerLink="/programacao"  >Cursos e Conferências</a>
+                </li>
+                <li>
+                  <a routerLink="/atividade-paralela">Atividades Paralelas</a>
+                </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  
+    <li><a routerLink="/expo" >ExpoFACE 2019</a></li>
+    
+    
+    <li><a routerLink="/adesao" class="">Adesão</a></li>
+  
+  </ul>
+  </header>
+  
+  
+  

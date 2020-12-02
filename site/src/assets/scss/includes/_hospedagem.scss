@@ -1,0 +1,52 @@
+#hospedagemPage{
+    @include paddingSection;
+    .title-hespedagem{
+        font-family: $font-title;
+        margin-top: 0px;
+    }
+    .collapsible{
+        box-shadow: none;
+        margin-top: 30px;
+        li{
+            &:nth-child(even){
+                .collapsible-header{
+                    background: $color-stripped-table;
+                }
+            }
+            .collapsible-header{
+                font-family: $font-robotoC;
+                font-weight: bold;
+                text-transform: uppercase;
+                transition: .5s all;
+                position: relative;
+                border-left: 2px solid $color-blue-default;
+                color: $color-title-default;
+                i{
+                    position: absolute;
+                    right: 0;
+                    transition: .5s all;
+                    color: $color-title-default;
+                }
+                &.active{
+                    background: $color-blue-default;
+                    color: #FFF;
+                    
+                    i{
+                        transform:rotate(-180deg);
+                        color: #FFF;
+                    }
+                }
+            }
+            .collapsible-body{
+                text-align: left;
+                padding:0px 11px;
+                .row{
+                    border-bottom: 1px solid $color-border-default;
+                    &:nth-child(odd){
+                        background: $color-stripped-table;
+                    }
+                }
+            }
+        }
+    }
+}

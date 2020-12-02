@@ -1,0 +1,27 @@
+#expoPage{  
+    @include paddingSection;
+    h3{
+        font-size:2rem;
+        color: $color-title-default;
+        font-family: $font-title;
+    }
+    
+    p{
+        color: $color-txt-default;
+    }
+
+    .card-panel{
+        display: table;
+        width: 100%;
+        min-height:70px;
+        background:$color-blue-default;    
+    }
+
+    .card-panel span{
+        display: table-cell;
+        position: relative;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+
+}

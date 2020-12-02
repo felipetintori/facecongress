@@ -1,0 +1,30 @@
+<app-menu-internas></app-menu-internas>
+<section id="titlePage" class="center-align">
+  <h2>Notícias</h2>
+  <hr>
+</section>
+<div class="container noticiasPage" >
+    <div class="row center-align">
+
+        <div class="col s10 offset-s1 materia-box white">
+            <p>
+                Publicado em: {{materia.dataPublicacao | date: 'dd'}}/{{materia.dataPublicacao | date: 'MM'}}/{{materia.dataPublicacao |
+                    date: 'yyyy'}} às {{materia.dataPublicacao | date: 'HH'}}:{{materia.dataPublicacao | date: 'mm'}}
+            </p>
+            <h2>{{materia.titulo}}</h2>
+            <p>
+                <em>{{materia.olho}}</em>
+            </p>
+            <img [src]="'https://www.odonto1.com/uploads/arquivos/' + materia.imagemRede" class="responsive-img">
+            <p class="left-align" [innerHTML]="materia.texto"></p>
+
+        </div>
+        <div class="col s12 center">
+                <a data-aos="zoom-in-down" class="waves-effect waves-light btn-large btn-default"
+                    routerLink="/todas-noticias" translate>ÚLTIMAS
+                    NOTÍCIAS</a>
+            </div>
+    </div>
+    
+</div>
+
